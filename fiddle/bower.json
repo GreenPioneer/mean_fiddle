@@ -1,0 +1,8 @@
+{
+  "name": "fiddle",
+  "version": "0.0.1",
+  "dependencies": {
+  	"angular-ui-ace":"0.2.3",
+  	"ace-builds":"1.1.9"
+  }
+}
