@@ -1,5 +1,7 @@
 .breadcrumb{
     margin-top: -18px;
+    position: absolute;
+    left: 0;
 }
 .ace_editor {
     height: 90%;
@@ -15,6 +17,8 @@
     width: 200px;
     overflow: auto;
     word-break: break-all;
+      padding-left: 5px;
+  padding-right: 5px;
 }
 #content {
     position: absolute;
@@ -22,27 +26,28 @@
     bottom: 0;
     left: 206px /* 200 + 6*/;
     right: 0;
-    overflow: hidden;
+   /* overflow: hidden;*/
     color: #FFF;
     
 }
 #top-content {
     position: absolute;
     top: 0;
-    bottom: 136px; /* 130 + 6 */
+    bottom: 256px; /* 130 + 6 */
     left: 0;
     right: 0;
     background-color: #444;
-    overflow: auto;
+    /*overflow: auto;*/
 }
 #bottom-content {
     position: absolute;
-    height: 130px;
+    height: 250px;
     bottom: 0;
     left: 0;
-    right: 0;
-    overflow: auto;
+    right: 0;/*
+    overflow: auto;*/
     background-color: #777;
+    z-index: 100;
 }
 
 #sidebar-resizer {
@@ -53,20 +58,24 @@
     left: 200px;
     width: 6px;
     cursor: e-resize;
+      z-index: 100;
 }
 #content-resizer {
     position: absolute;
     height: 6px;
-    bottom: 130px;
+    bottom: 250px;
     left: 0;
     right: 0;
     background-color: #666;
     cursor: n-resize;
+      z-index: 100;
 }
 
 #sidebar-resizer:hover, #preview-resizer:hover {
   background-color: #AAA;
 }
-
+html{
+    overflow: hidden;
+}
 
 /**/

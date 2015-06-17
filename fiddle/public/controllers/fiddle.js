@@ -65,6 +65,17 @@ $scope.tabs = [
         });
       
     };
+    $scope.fork = function() {
+        delete $scope.fiddleShow._id;
+        delete $scope.fiddleShow.created;
+        delete $scope.fiddleShow.user;
+        var fiddleData = new fiddle($scope.fiddleShow);
+        fiddleData.$save(function(response) {
+          console.log(response);
+          $location.path('fiddle/'+response._id)
+        });
+      
+    };
     $scope.remove = function(data) {
         var r = confirm("Are you sure you want to delete this");
         if (r == true) {
@@ -77,12 +88,8 @@ $scope.tabs = [
     };
 
     $scope.update = function() {
-      
-        
-        
-
         $scope.fiddleShow.$update(function() {
-         console.log('updated')
+         alert('updated')
         });
       
     };
@@ -154,5 +161,5 @@ $scope.tabs = [
 
 
 
-  }
-]);
+  
+  }]);
